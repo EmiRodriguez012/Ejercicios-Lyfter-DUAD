@@ -1,0 +1,33 @@
+players= [
+    "Cristiano",
+    "Pele",
+    "Maradona",
+    "Hulk"
+]
+
+first_element= 0
+last_element= 0
+
+for index, player in enumerate (players):
+    if index == 0:
+        first_element = index
+    elif index == len(players) -1:
+        last_element = index
+
+
+last= players.pop(last_element)
+first = players.pop(first_element)
+
+
+players. insert(0, last)
+players. append(first)
+
+print(players)
+
+
+    
+
+
+
+
+
