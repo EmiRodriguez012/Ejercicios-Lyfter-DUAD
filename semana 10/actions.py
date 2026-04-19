@@ -1,20 +1,21 @@
 from data import export_data_csv, import_data_csv
 
-students = []
 
 
-def save_students_csv():
+
+def save_students_csv(students):
     export_data_csv(students)
     print ("Students data saved successfully")
 
 def load_students_csv():
-    global students
     students= import_data_csv()
 
     if len(students) > 0 :
         print ("Students data loaded successfully")
     else:
         print ("No data loaded.")
+
+    return students
 
 
 
@@ -67,7 +68,7 @@ def calculate_student_ponderate(student):
 
     return ponderate
 
-def show_top3_students():
+def show_top3_students(students):
     results = []
     if len(students) == 0:
         print ("Students not found")
@@ -84,7 +85,7 @@ def show_top3_students():
         print(f" Student {counter}: {student ['full_name']} Score: {score}")
 
         
-def show_students_ponderates_average():
+def show_students_ponderates_average(students):
     if len(students) == 0:
         print ("Students not found")
         return
@@ -94,6 +95,6 @@ def show_students_ponderates_average():
           ponderate = calculate_student_ponderate (student)
           ponderates_average.append(ponderate)
     
-    print (sum(ponderates_average)/len(ponderates_average))
+    print (f"The combined students ponderate is {sum(ponderates_average)/len(ponderates_average)}")
 
 

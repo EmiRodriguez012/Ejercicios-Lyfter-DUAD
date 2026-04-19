@@ -1,4 +1,4 @@
-from actions import create_student, students, show_students, show_top3_students, show_students_ponderates_average, save_students_csv, load_students_csv
+from actions import create_student, show_students, show_top3_students, show_students_ponderates_average, save_students_csv, load_students_csv
 
 
 def show_menu():
@@ -11,8 +11,8 @@ def show_menu():
     print ("6.Import all data from CSV")
     print ("7.Exit")
 
-def menu_opcions():
-    while True:
+def menu_opcions(students):
+    
         show_menu()
         option= input("Please select an opcion:")
 
@@ -24,20 +24,22 @@ def menu_opcions():
             show_students(students)
         elif option == "3":
             print("Show top 3 students")
-            show_top3_students()
+            show_top3_students(students)
         elif option == "4":
             print("Show student ponderates")
-            show_students_ponderates_average()
+            show_students_ponderates_average(students)
         elif option == "5":
             print ("Export all data to CSV")
-            save_students_csv()
+            save_students_csv(students)
         elif option == "6":
             print ("Import all data from CSV")
-            load_students_csv()
+            students= load_students_csv()
         elif option == "7":
             print ("Exiting program")
-            break
+            return None
         else:
             print("Invalid opcion, please try again:")
+        
+        return students
             
 
