@@ -5,18 +5,21 @@ def check_to_delete_cookies(func):
         print(f"amount of cookies: {cookies}")
 
         if cookies > 10:
-            func(cookies)
+            result_cookies= func(cookies)
+            print (f"Returned result: {result_cookies}")
+            return result_cookies
         else:
             print("It is not necessary to delete cookies at this time.")
 
         
+              
     return wrapper
     
 
 @check_to_delete_cookies
 def delete_cookies(cookies):
-
-    print("Cookies deleted")
+    
+    return "Cookies deleted succesfully"
 
 
 delete_cookies(12)
