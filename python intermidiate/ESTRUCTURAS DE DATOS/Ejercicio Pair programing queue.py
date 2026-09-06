@@ -20,7 +20,7 @@ class LinkedList:
 
     self.tail = current_node
     
-    
+     
 
   def print_structure(self):
     current_node = self.head
@@ -55,3 +55,4 @@ print("Quitando un elemento")
 
 queue.dequeue()
 queue.print_structure()
+
