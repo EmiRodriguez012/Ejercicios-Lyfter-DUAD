@@ -7,7 +7,6 @@ def lowers_check(text):
     return len(lowers)
         
 
-
 def uppers_check(text):
     uppers= "" 
     for letter in text:
@@ -19,9 +18,9 @@ def uppers_check(text):
 def main_check (text):
     lowers= lowers_check(text)
     uppers= uppers_check(text)
-    return f"there are {lowers} lower letters and {uppers} capital letters in the text."
+    return (f"there are {uppers} upper letters and {lowers} lower letters in the text.")
 
           
-print(main_check ("The are Five CAPITAL letter and two Lower Letters"))
+print (main_check("Lowers and Uppers COMBINED"))
 
 

@@ -1,6 +1,8 @@
-primes_list= []
 
-def primes_check (numbers):
+
+def check_for_primes (numbers):
+    primes_list= []
+    
     for number in numbers:
         if number > 1:
             for i in range (2, int(number ** 0.5) +1):
@@ -14,4 +16,3 @@ def primes_check (numbers):
 
  
     
-print(primes_check([6,9,4,2,6,8,14,50,7, 34, 12, 67 ]))
