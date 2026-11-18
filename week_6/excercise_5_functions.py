@@ -1,0 +1,28 @@
+def lowers_check(text):
+    lowers = ""
+    for letter in text:
+        if letter.islower():
+            lowers += letter
+
+    return len(lowers)
+
+
+def uppers_check(text):
+    uppers= ""
+    for letter in text:
+        if letter.isupper():
+            uppers += letter
+
+    return len(uppers)
+
+def main_check (text):
+    lowers= lowers_check(text)
+    uppers= uppers_check(text)
+    return (f"there are {uppers} upper letters and {lowers} lower letters in the text.")
+
+
+if __name__ == "__main__":
+    print (main_check("Lowers and Uppers COMBINED"))
+
+    result = main_check("Hello WORLD")
+    print(result)
